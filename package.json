@@ -1,14 +1,22 @@
 {
   "name": "kobeni",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "version": "1.0.0",
+  "description": "cute",
+  "main": "index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "devDependencies": {
-    "vite": "^4.3.2"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xorvet/kobeni.git"
+  },
+  "keywords": [
+    "cute"
+  ],
+  "author": "Revat",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xorvet/kobeni/issues"
+  },
+  "homepage": "https://github.com/xorvet/kobeni#readme"
 }
