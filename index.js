@@ -5,11 +5,21 @@ function fetchHTML(path) {
     .then((doc) => doc.text())
     .then((html) => {
       const doc = (new DOMParser()).parseFromString(html, "text/html").body.children;
+
       const script = document.createElement('script');
+      script.setAttribute("type", "module");
+      script.setAttribute("async", "");
       script.innerText = doc[1].innerText;
+
       return [doc[0], script];
     });
 };
+
+/**
+export function State(data) {
+  const main = document.querySelector('main');
+}
+**/
 
 export function Component(id, path) {
   fetchHTML(path).then((kid) => {
