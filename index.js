@@ -13,14 +13,16 @@ function fetchHTML(path) {
     });
 };
 
-export function State(data) {
-  const main = document.querySelector('main');
-  let formated = main.innerHTML;
+export function State(els, data) {
+  els.forEach((i) => {
+    const main = document.querySelector(i);
+    let formated = main.innerHTML;
 
-  Object.keys(data).forEach((key) => {
-    formated = formated.replace(new RegExp(`{${key}}`, "g"), data[key]);
+    Object.keys(data).forEach((key) => {
+      formated = formated.replace(new RegExp(`{${key}}`, "g"), data[key]);
+    });
+    main.innerHTML = formated;
   });
-  main.innerHTML = formated;
 }
 
 export function Component(id, path) {
