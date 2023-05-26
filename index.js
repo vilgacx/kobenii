@@ -3,12 +3,10 @@ function fetchHTML(path) {
     .then((doc) => doc.text())
     .then((html) => {
       const doc = (new DOMParser()).parseFromString(html, "text/html").body.children;
-      const script = document.createElement('script');
-      
+      const script = document.createElement('script'); 
       script.setAttribute("type", "module");
       script.setAttribute("async", "");
       script.innerText = doc[1].innerText;
-
       return [doc[0], script];
     });
 };
@@ -17,11 +15,9 @@ export function State(els, data) {
   els.forEach((i) => {
     const main = document.querySelector(i);
     let formated = main.innerHTML;
-
     Object.keys(data).forEach((key) => {
       formated = formated.replace(new RegExp(`{${key}}`, "g"), data[key]);
     });
-
     main.innerHTML = formated;
   });
 }
@@ -34,7 +30,6 @@ export function Component(id, path) {
 
 export function Route(id, paths) {
   const routdiv = document.querySelector(id);
-
   function Routing() {
     const hash = (window.location.hash).slice(1);
     if (Object.keys(paths).includes(hash)) {
@@ -47,7 +42,6 @@ export function Route(id, paths) {
     }
   };
   Routing();
-
   window.addEventListener('hashchange', () => {
     Routing();
   });
