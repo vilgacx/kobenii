@@ -1,13 +1,11 @@
-export function State(eles, data) {
-  eles.forEach((i) => {
-    const main = document.querySelector(i);
-    let formated = main.innerHTML;
-    Object.keys(data).forEach((key) => {
-      formated = formated.replace(new RegExp(`<${key}>(.*?)</${key}>`, 'g'), `<${key}>${data[key]}</${key}>`);
+export function State(con, data) {
+  Object.keys(data).forEach((key) => {
+    document.querySelector(con).querySelectorAll(key).forEach((ele) => {
+      ele.innerText = data[key];
     });
-    main.innerHTML = formated;
   });
 }
+
 export function Component(id, path) {
   f(path).then((kid) => {
     document.querySelector(id).append(kid[0], kid[1]);
@@ -38,7 +36,7 @@ function f(path) {
     .then((doc) => doc.text())
     .then((html) => {
       const doc = (new DOMParser()).parseFromString(html, "text/html").body.children;
-      const script = document.createElement('script'); 
+      const script = document.createElement('script');
       script.setAttribute("type", "module");
       script.setAttribute("async", "");
       script.innerText = doc[1].innerText;
