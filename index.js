@@ -1,11 +1,13 @@
 export function Init() {
   window.onload = () => {
     document.querySelectorAll('a').forEach((a) => {
-      a.onclick = (e) => {
-        e.preventDefault();
-        history.pushState({}, '', a.href.replace(window.location.origin, ''));
-        window.dispatchEvent(new Event('popstate'));
-      };
+      if (a.hasAttribute('route')) {
+        a.onclick = (e) => {
+          e.preventDefault();
+          history.pushState({}, '', a.href.replace(window.location.origin, ''));
+          window.dispatchEvent(new Event('popstate'));
+        };
+      }
     });
   };
 };
