@@ -1,4 +1,4 @@
-const origin = window.location.origin;
+const o = window.location.origin;
 
 export function Init() {
   window.onload = () => {
@@ -6,7 +6,7 @@ export function Init() {
       if (a.hasAttribute('route')) {
         a.onclick = (e) => {
           e.preventDefault(); 
-          history.pushState({}, '', a.href.replace(origin, ''));
+          history.pushState({}, '', a.href.replace(o, ''));
           window.dispatchEvent(new Event('popstate'));
         };
       }
@@ -31,7 +31,7 @@ export function Component(id, path) {
 export function Route(id, paths) {
   const routdiv = document.querySelector(id);
   function Routing() {
-    const path = (window.location.href).replace(origin, '');
+    const path = (window.location.href).replace(o, '');
     if (Object.keys(paths).includes(path)) {
       f(paths[path]).then((kid) => {
         routdiv.innerHTML = '';
