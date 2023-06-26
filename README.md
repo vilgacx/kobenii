@@ -4,8 +4,8 @@
 
 Kobeni is cute, super lightweight, easy to use JavaScript framework designed to provide essential functionalities for building web applications. **Minified version of kobeni ~ 1KB!**. Kobeni offers powerful features such as **routing, state, and component management**.
 
-*(documentation will be available soon)*
-*(Code inside index.js is mostly self-explanatory if you are a good JS developer)*
+*(documentation will be available soon).*
+*(Code inside index.js is mostly self-explanatory if you are a good JS developer).*
 
 ## License
 
