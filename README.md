@@ -10,3 +10,6 @@ Kobeni is cute, super lightweight, easy to use JavaScript framework designed to 
 ## License
 
 Kobeni is released under the MIT License. See the [LICENSE](LICENSE) file for more information.
+
+### Note
+*I think kobeni should be a compiler rather than index.min.js shipped and changing stuff.*
