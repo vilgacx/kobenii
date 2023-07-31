@@ -45,7 +45,7 @@ export function Route(id, paths) {
   });
 };
 
-function f(path) {
+async function f(path) {
   return fetch(path)
     .then((doc) => doc.text())
     .then((html) => {
