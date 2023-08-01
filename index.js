@@ -37,8 +37,6 @@ export function Route(id, paths) {
         routdiv.innerHTML = '';
         routdiv.append(kid[0], kid[1]);
       });
-    } else {
-      routdiv.innerHTML = '';
     }
   };
   Routing();
