@@ -31,7 +31,7 @@ export function Component(id, path) {
 };
 
 export function Route(id, paths) {
-  const routdiv = document.querySelector(id);
+  const routdiv = document.querySelector(id); 
   function Routing() {
     const path = (window.location.href).replace(o, '');
     if (Object.keys(paths).includes(path)) {
@@ -53,12 +53,15 @@ async function f(path) {
   return fetch(path)
     .then((doc) => doc.text())
     .then((html) => {
+      html = html.trim();
       const doc = (new DOMParser()).parseFromString(html, "text/html").body.children;
       const script = document.createElement('script');
-      script.innerText = doc[1].innerText;
-      script.setAttribute("type", "module");
-      script.setAttribute("async", "");
-      const htmldoc = html.trim().replace("/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi","");
-      return [htmldoc, script];
+      if (doc[1].innerHTML.trim() !== "") { 
+        script.innerText = doc[1].innerText;
+        script.setAttribute("type", "module");
+        script.setAttribute("async", "");
+      }
+      html.replace("/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi","");
+      return [html, script];
     });
 };
