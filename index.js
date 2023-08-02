@@ -24,7 +24,9 @@ export function State(con, data) {
 
 export function Component(id, path) {
   f(path).then((kid) => {
-    document.querySelector(id).append(kid[0], kid[1]);
+    const ele = document.querySelector(id);
+    ele.innerHTML = kid[0];
+    ele.append(kid[1]);
   });
 };
 
@@ -34,9 +36,11 @@ export function Route(id, paths) {
     const path = (window.location.href).replace(o, '');
     if (Object.keys(paths).includes(path)) {
       f(paths[path]).then((kid) => {
-        routdiv.innerHTML = '';
-        routdiv.append(kid[0], kid[1]);
+        routdiv.innerHTML = kid[0];
+        routdiv.append(kid[1]);
       });
+    } else {
+      routdiv.innerHTML = '';
     }
   };
   Routing();
@@ -51,9 +55,10 @@ async function f(path) {
     .then((html) => {
       const doc = (new DOMParser()).parseFromString(html, "text/html").body.children;
       const script = document.createElement('script');
+      script.innerText = doc[1].innerText;
       script.setAttribute("type", "module");
       script.setAttribute("async", "");
-      script.innerText = doc[1].innerText;
-      return [doc[0], script];
+      const htmldoc = html.trim().replace("/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi","");
+      return [htmldoc, script];
     });
 };
