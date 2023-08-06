@@ -52,8 +52,8 @@ export function Route(id, paths) {
 async function f(path) {
   return fetch(path)
     .then((doc) => doc.text())
-    .then((html) => {
-      html = html.trim();
+    .then((htmldoc) => {
+      const html = htmldoc.trim();
       const doc = (new DOMParser()).parseFromString(html, "text/html").body.children;
       const script = document.createElement('script');
       if (doc[1].innerHTML.trim() !== "") { 
