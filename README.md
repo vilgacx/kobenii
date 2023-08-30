@@ -29,10 +29,9 @@ Init();
 **Note: when creating component or a page that will be routed by kobenii you have to make sure to create only two parent elements where first parent should always be a content element second should be a script element. If broken these rules it won't work. Any script tag inside content parent won't work. This is how it should look:**
 ```html
 <main>
-  //elements here
-  
+  <!--elements here-->
   <style>
-    //your styles here
+    /*your styles here*/
   </style>
 </main>
 
@@ -85,6 +84,7 @@ Init();
 ```
 
 #### Local State
+`<a-component-or-route>.html`
 ```html
   <main class="main">
     <p>
