@@ -4,6 +4,9 @@
 
 Kobeni is cute, super lightweight, easy to use JavaScript framework designed to provide essential functionalities for building web applications. **Minified version of kobeni ~ 1.14KB**. Kobeni offers powerful features such as **routing, local state, and components**. Kobenii uses .html files as it's file format like a true OG.
 
+### Note
+*I am not going to continue this project as I think kobenii should be a something like a compiler rather than .js file shipped and changing stuff. I will be making a another project which will surely be far superior than kobenii*
+
 ### Installation
 
 ```
@@ -118,6 +121,3 @@ Init();
 
 ## LICENSE
 Kobeni is released under the MIT License. See the [LICENSE](LICENSE) file for more information.
-
-### Note
-*I think kobeni should be a compiler rather than index.min.js shipped and changing stuff.*
