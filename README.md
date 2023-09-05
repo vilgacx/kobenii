@@ -2,6 +2,8 @@
 
 *cute mini js framework*
 
+**site: [vilgacx.github.io/kobenii](https://vilgacx.github.io/kobenii/)**
+
 Kobeni is cute, super lightweight, easy to use JavaScript framework designed to provide essential functionalities for building web applications. **Minified version of kobeni ~ 1.14KB**. Kobeni offers powerful features such as **routing, local state, and components**. Kobenii uses .html files as it's file format like a true OG.
 
 ### Note
