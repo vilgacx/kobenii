@@ -20,10 +20,10 @@
       </div>
       <div class="links-div bordered spaced">
         <a href="https://github.com/vilgacx/kobenii">github</a>
-        <a href="/" route>about</a>
-        <a href="/#/installation" route>installation</a>
+        <a href="/kobenii/" route>about</a>
+        <a href="/kobenii/#/installation" route>installation</a>
         <a href="https://github.com/vilgacx/kobenii/blob/main/README.md#usage">usage</a>
-        <a href="/#/license" route>LICENSE</a>
+        <a href="/kobenii/#/license" route>LICENSE</a>
       </div>
       <route class="route spaced" />
     </span>
@@ -31,9 +31,9 @@
     import { Init, Route, Component } from './index.min.js';
     Init();
     Route('route', {
-      '/': './routes/about.html',
-      '/#/installation': './routes/installation.html',
-      '/#/license': './routes/license.html'
+      '/kobenii/': './routes/about.html',
+      '/kobenii/#/installation': './routes/installation.html',
+      '/kobenii/#/license': './routes/license.html'
     });
     Component('.counter', './components/counter.html');
     </script>
