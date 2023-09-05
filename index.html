@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="head">
+      <h1>Kobenii</h1>
+      <h3>a minimal, cute, super-lightweight javascript framework.</h3>
+      <i>(this site has been Kobenii-ed!)</i> 
+    </div>
+    <div class="counter bordered spaced"></div>
+    <span class="content spaced">
+      <div class="note-div bordered">
+        <p class="note-head">NOTE</p>
+        <p class="note">I am not going to continue this project as I think kobenii should be a something like a compiler rather than .js file shipped and changing stuff. I will be making a another project which will surely be far superior than kobenii</p>
+      </div>
+      <div class="links-div bordered spaced">
+        <a href="/" route>about</a>
+        <a href="/#/installation" route>installation</a>
+        <a href="https://github.com/vilgacx/kobenii/blob/main/README.md#usage">usage</a>
+        <a href="/#/license" route>LICENSE</a>
+      </div>
+      <route class="route spaced" />
+    </span>
+    <script type="module">
+    import { Init, Route, Component } from './index.min.js';
+    Init();
+    Route('route', {
+      '/': './routes/about.html',
+      '/#/installation': './routes/installation.html',
+      '/#/license': './routes/license.html'
+    });
+    Component('.counter', './components/counter.html');
+    </script>
+  </body>
+</html>
