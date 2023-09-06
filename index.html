@@ -32,14 +32,14 @@
       <route class="route spaced" />
     </span>
     <script type="module">
-    import { Init, Route, Component } from './index.min.js';
+    import { Init, Route, Component } from 'index.min.js';
     Init();
     Route('route', {
       '/kobenii/': './routes/about.html',
       '/kobenii/#/installation': './routes/installation.html',
       '/kobenii/#/license': './routes/license.html'
     });
-    Component('.counter', './components/counter.html');
+    Component('.counter', './counter.html');
     </script>
   </body>
 </html>
