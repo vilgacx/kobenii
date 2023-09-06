@@ -59,7 +59,7 @@ async function f(path) {
       if (doc[1].innerHTML.trim() !== "") { 
         script.innerText = doc[1].innerText;
         script.setAttribute("type", "module");
-        script.setAttribute("async", "");
+        script.setAttribute("async", true);
       }
       html.replace("/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi","");
       return [html, script];

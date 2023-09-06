@@ -1,28 +1,29 @@
-  <main class="counter-main">
-    <p>Little Counter: <val></val> kobeniis <button class="addbtn btn">+</button><button class="subbtn btn">-</button></p>
-    <style>
-    .btn {
-      margin-left: 1vh;
-      width: 3vh;
-      font-weight: bold;
-    }
-    </style>
-  </main>
+<main class="counter-main">
+  <p>Little Counter: <val></val> kobeniis <button class="addbtn btn">+</button><button class="subbtn btn">-</button></p>
+  <style>
+  .btn {
+    margin-left: 1vh;
+    width: 3vh;
+    font-weight: bold;
+  }
+  </style>
+</main>
 
-  <script>
-    const { State } = await import('../index.min.js');
-    const data = { val: 0 };
-    State('.counter-main',data);
-    
-    const addbtn = document.querySelector('.addbtn');
-    addbtn.onclick = () => {
-      data.val = data.val + 1;
-      State('.counter-main',data);
-    };
+<script>
+import { State } from '../index.min.js';
 
-    const subbtn = document.querySelector('.subbtn');
-    subbtn.onclick = () => {
-      data.val = data.val - 1;
-      State('.counter-main',data);
-    };
-  </script>
+const data = { val: 0 };
+State('.counter-main',data);
+
+const addbtn = document.querySelector('.addbtn');
+addbtn.onclick = () => {
+  data.val = data.val + 1;
+  State('.counter-main',data);
+};
+
+const subbtn = document.querySelector('.subbtn');
+subbtn.onclick = () => {
+  data.val = data.val - 1;
+  State('.counter-main',data);
+};
+</script>
