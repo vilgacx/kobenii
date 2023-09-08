@@ -101,6 +101,7 @@ Init();
 <script>
   //import "State"
   import { State } from '<path>/kobenii.js'; 
+  
   //set a inital state
   const data = { name: "revat", age: "69" };
     
