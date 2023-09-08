@@ -91,33 +91,32 @@ Init();
 #### Local State
 `<a-component-or-route>.html`
 ```html
-  <main class="main">
-    <p>
-      My name is <name></name> and my age is <age></age>
-    </p>
-    <button class="btn">change</button>
-  </main>
+<main class="main">
+  <p>
+    My name is <name></name> and my age is <age></age>
+  </p>
+  <button class="btn">change</button>
+</main>
 
-  <script>
-    //import kobenii
-    const { State } = await import('<path>/kobenii.js');
+<script>
+  //import "State"
+  import { State } from '<path>/kobenii.js'; 
+  //set a inital state
+  const data = { name: "revat", age: "69" };
     
-    //set a inital state
-    const data = { name: "revat", age: "69" };
+  //State('<element-selector>',{key: value})
+  State('.main',data);
     
-    //State('<element-selector>',{key: value})
+  const btn = document.querySelector('.btn');
+  btn.onclick = () => { 
+    //change data
+    data.name = "kobenii";
+    data.age = "21";
+    
+    //update state
     State('.main',data);
-    
-    const btn = document.querySelector('.btn');
-    btn.onclick = () => {
-      //change data
-      data.name = "kobenii";
-      data.age = "21";
-
-      //update state
-      State('.main',data);
-    };  
-  </script>
+  };  
+</script>
 ```
 
 ### Problems
