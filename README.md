@@ -12,7 +12,7 @@ Kobeni is cute, super lightweight, easy to use JavaScript framework designed to 
 ### Installation
 
 ```
-curl https://raw.githubusercontent.com/xorvet/kobenii/main/index.min.js > kobenii.js
+curl https://raw.githubusercontent.com/vilgacx/kobenii/main/index.min.js > kobenii.js
 ```
 
 ### Setup
