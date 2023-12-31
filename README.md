@@ -121,7 +121,7 @@ Init();
 ```
 
 ### Problems
-Can be slow sometimes to load content. The pages load is excellent but sometimes loading content can take upto 500 millisecond.
+Can be slow sometimes to load content. The pages load excellently, but sometimes loading content can take upto 500 millisecond.
 
 ## LICENSE
-Kobeni is released under the MIT License. See the [LICENSE](LICENSE) file for more information.
+kobenii is released under the MIT License. See the [LICENSE](LICENSE) file for more information.
