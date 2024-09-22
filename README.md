@@ -1,10 +1,10 @@
 # kobenii
 
-*cute mini js framework*
+*mini js framework*
 
 **site: [vilgacx.github.io/kobenii](https://vilgacx.github.io/kobenii/)**
 
-Kobeni is cute, super lightweight, easy to use JavaScript framework designed to provide essential functionalities for building web applications. **Minified version of kobeni ~ 1.17KB**. Kobeni offers powerful features such as **routing, local state, and components**. Kobenii uses .html files as it's file format like a true OG.
+Kobenii is tiny, minimal, super-lightweight JavaScript framework designed to provide essential functionalities for building web applications. **Minified version of kobeni ~ 1.17KB**. Kobeni offers powerful features such as **routing, local state, and components**. Kobenii uses .html files as it's file format like a true OG.
 
 ### Note
 *I am not going to continue this project as I think kobenii should be a something like a compiler rather than .js file shipped and changing stuff. I will be making a another project which will surely be far superior than kobenii*
